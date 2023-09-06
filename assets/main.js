@@ -1,10 +1,12 @@
 let nivel = 0;
-let ultimoNivel = 50; //vai ate a tela 100
+let ultimoNivel = 100; //vai ate a tela 150
 let telaIni = "url('https://64.media.tumblr.com/cfcfcfdf859182b5fe03b0c6072bd746/53bc382e63d71f2c-63/s540x810/f42b796e22f34b8451eb1484eff87a5f3f731ae0.gifv')";
 mostrarMenu();
 function mostrarMenu() {
 	if (nivel === 50)
 		telaIni = "url('https://64.media.tumblr.com/cfacf758ecde2c3e83a02d33edb42ffd/53bc382e63d71f2c-f2/s500x750/695413005a4aa453af551da60733f897b295c633.gifv')";
+	else if (nivel===100)
+		telaIni = "url('https://64.media.tumblr.com/74085e0f3bcce2c9720f9ce1a7ed11b4/0de65dbc5de7cc87-23/s540x810/bf141447554e41a65431b382bb338b3ce6254645.gifv')";
 	document.body.style.backgroundImage = telaIni;
 	document.getElementById("divTela").style.display = 'none';
 	document.getElementById("divMenu").style.display = 'block';
@@ -17,6 +19,8 @@ document.getElementById("bot5").disabled = true;
 function novaTela() {
 	if (tela >= 51 && tela < 101)
 		mudarTela51();
+	else if (tela>=101&&tela<151)
+				mudarTela101();
 	else
 		mudarTela();
 }
