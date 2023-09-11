@@ -31,7 +31,7 @@ function novaTela() {
 function escolherTema(escolha) {
 	tela = escolha + nivel;
 	novaTela();
-	chance = 15;
+	chance = 8;
 	stringTela = document.getElementById("divTela");
 	stringTela.innerHTML = `Tela ${tela} - ${chance} chances`;
 	mostrarTelaNumerosChances();
@@ -42,7 +42,7 @@ function mostrarTelaNumerosChances() {
 	document.getElementById("divBtn").style.display = 'block';
 }
 let cheat = 0;
-let bonus = 3;
+let bonus = 4;
 let novaCor = 0;
 let terminou = 0;
 let ativos = [];
